@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
+// /* eslint-disable @typescript-eslint/no-magic-numbers */
 
 export const SIXTY = 60 as const;
 export const ONE_HUNDRED = 100 as const;
@@ -12,5 +12,6 @@ export enum HttpCode {
  UNAUTHORIZED = 401,
  FORBIDDEN = 403,
  NOT_FOUND = 404,
+ UNPROCESSABLE_ENTITY = 422,
  INTERNAL_SERVER_ERROR = 500
 }

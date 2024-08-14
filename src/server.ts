@@ -6,6 +6,7 @@ import rateLimit from 'express-rate-limit';
 import { setupSwagger } from './swagger';
 import morgan from 'morgan';
 import { ONE_HUNDRED, SIXTY } from './core/constants';
+import sendmessage from './routes/sendmessage-routes';
 
 const app = express();
 app.use(express.json());
@@ -18,6 +19,8 @@ app.use(
 		message: 'Trop de Requete à partir de cette adresse IP '
 	})
 );
+
+app.use(sendmessage);
 
 app.use(morgan('combined'));
 
